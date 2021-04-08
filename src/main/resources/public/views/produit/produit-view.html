@@ -1,0 +1,31 @@
+<div class="container pad-top">
+  <table class="table entitytable">
+      <tr>
+          <td><h3>Details for {{produit.nom}}</h3></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>Name</td>
+          <td>{{produit.nom}}</td>
+      </tr>
+      <tr>
+          <td>Description</td>
+          <td>{{produit.description}}</td>
+      </tr>
+      <tr>
+          <td>Prix Unitaire</td>
+          <td>{{produit.prix_unitaire}}</td>
+      </tr>
+      <tr>
+          <td>Quantite en stock</td>
+          <td>{{produit.stock_quantite}}</td>
+      </tr>
+     <!-- <tr>
+          <td>Produit Category</td>
+          <td>{{produit.category.name}}</td>
+      </tr>-->
+  </table>
+  <div class="col-xs-offset-5 col-xs-2">
+      <a class="btn btn-primary" ui-sref="editProduit({id:produit.id})">Edit</a>
+  </div>
+</div>

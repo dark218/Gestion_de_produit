@@ -1,0 +1,24 @@
+<div class="container pad-top">
+  <table class="table entitytable">
+      <tr>
+          <td><h3>Details for {{commande.id}}</h3></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>Client</td>
+          <td>{{commande.client.nom}}</td>
+      </tr>
+      <tr>
+          <td>Company</td>
+          <td>{{commande.produit.nom}}</td>
+      </tr>
+      <tr>
+          <td>Quantite</td>
+          <td>{{commande.quantite}}</td>
+      </tr>
+      
+  </table>
+  <div class="col-xs-offset-5 col-xs-2">
+      <a class="btn btn-primary" ui-sref="editCommande({id:commande.id})">Edit</a>
+  </div>
+</div>

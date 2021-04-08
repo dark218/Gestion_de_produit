@@ -1,0 +1,27 @@
+<div class="container pad-top">
+  <a ng-show="user" ui-sref="newClient" class="btn-primary btn-lg nodecoration">Ajouter un Client</a>
+  <table class="table entitytable">
+      <tr>
+          <td><h3>Tous les clients</h3></td>
+          <td></td>
+      </tr>
+      <tr>
+      	<td><strong>Nom</strong></td>
+        <td><strong>Prenom</strong></td>
+        <td><strong>Adresse</strong></td>
+        <td><strong>Numero</strong></td>
+        <td><strong>Action</strong></td>
+      </tr>
+      <tr ng-repeat="client in clients">
+          <td>{{client.nom}}</td>
+          <td>{{client.prenom}}</td>
+          <td>{{client.adresse}}</td>
+          <td>{{client.numero}}</td>
+          <td>
+              <a class="btn btn-primary" ui-sref="viewClient({id:client.id})">View</a>
+              <a class="btn btn-danger"  ng-click="deleteClient(client)">Delete</a>
+          </td>
+      </tr>
+  </table>
+  <div class="alert alert-danger margin-top-2" ng-show="message">{{message}}</div>
+</div>

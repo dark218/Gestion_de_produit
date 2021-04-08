@@ -1,0 +1,30 @@
+<div class="form-group">
+    <label for="name" class="col-sm-2 control-label">Nom</label>
+    <div class="col-sm-10">
+        <input required type="text" ng-model="produit.nom" class="form-control" id="name" placeholder="Nom du produit"/>
+    </div>
+</div>
+<div class="form-group">
+    <label for="description" class="col-sm-2 control-label">Description</label>
+    <div class="col-sm-10">
+        <input required type="text" ng-model="produit.description" class="form-control" id="description" placeholder="Description"/>
+    </div>
+</div>
+<div class="form-group">
+    <label for="unitPrice" class="col-sm-2 control-label">Prix unitaire</label>
+    <div class="col-sm-10">
+        <input required type="text" ng-model="produit.prix_unitaire" class="form-control" id="prix_unitaire" placeholder="Prix unitaire"/>
+    </div>
+</div>
+<div class="form-group">
+    <label for="unitsInStock" class="col-sm-2 control-label">Quantite en stock</label>
+    <div class="col-sm-10">
+        <input required type="text" ng-model="produit.stock_quantite" class="form-control" id="stock_quantite" placeholder="Quantite stockée"/>
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+        <input type="submit" class="btn btn-primary" value="Save"/>
+    </div>
+</div>

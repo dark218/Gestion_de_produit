@@ -1,0 +1,29 @@
+<div class="container pad-top">
+  <a ng-show="user" ui-sref="newProduit" class="btn-primary btn-lg nodecoration">Ajouter Produit</a>
+  <table class="table entitytable">
+      <tr>
+          <td><h3>Tous les  Produits</h3></td>
+          <td></td>
+      </tr>
+      <tr>
+      	<td><strong>Nom</strong></td>
+        <td><strong>Description</strong></td>
+        <td><strong>Prix Unitaire</strong></td>
+        <td><strong>Quantite en stock</strong></td>
+       <!-- <td><strong>Category</strong></td>-->
+        <td><strong>Action</strong></td>
+      </tr>
+      <tr ng-repeat="produit in produits">
+          <td>{{produit.nom}}</td>
+          <td>{{produit.description}}</td>
+          <td>{{produit.prix_unitaire}}</td>
+          <td>{{produit.stock_quantite}}</td>
+          <!-- <td>{{produit.category.name}}</td>-->
+          <td>
+              <a class="btn btn-primary" ui-sref="viewProduit({id:produit.id})">View</a>
+              <a class="btn btn-danger"  ng-click="deleteProduit(produit)">Delete</a>
+          </td>
+      </tr>
+  </table>
+  <div class="alert alert-danger margin-top-2" ng-show="message">{{message}}</div>
+</div>

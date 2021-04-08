@@ -1,0 +1,28 @@
+<div class="container pad-top">
+  <a ng-show="user" ui-sref="newCommande" class="btn-primary btn-lg nodecoration">Ajouter commande</a>
+  <table class="table entitytable">
+      <tr>
+          <td><h3>Toutes les commandes</h3></td>
+          <td></td>
+      </tr>
+      <tr>
+      	<td><strong>Client</strong></td>
+        <td><strong>Produit</strong></td>
+        <td><strong>Quantite</strong></td>
+        <td><strong>Prix à payer</strong></td>
+        
+      </tr>
+      <tr ng-repeat="commande in commandes">
+          <td>{{commande.client.nom}} {{commande.client.prenom}}</td>
+          <td>{{commande.produit.nom}}</td>
+          <td>{{commande.quantite}}</td>
+          <td>{{commande.quantite*commande.produit.prix_unitaire}}</td>
+         
+          <td>
+              <a class="btn btn-primary" ui-sref="viewCommande({id:commande.id})">View</a>
+              <a class="btn btn-danger"  ng-click="deleteCommande(commande)">Delete</a>
+          </td>
+      </tr>
+  </table>
+  <div class="alert alert-danger margin-top-2" ng-show="message">{{message}}</div>
+</div>

@@ -1,0 +1,27 @@
+<div class="container pad-top">
+  <table class="table entitytable">
+      <tr>
+          <td><h3>Details for {{client.nom}}</h3></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>Nom</td>
+          <td>{{client.nom}}</td>
+      </tr>
+      <tr>
+          <td>Prenom</td>
+          <td>{{client.prenom}}</td>
+      </tr>
+      <tr>
+          <td>Adresse</td>
+          <td>{{client.adresse}}</td>
+      </tr>
+      <tr>
+          <td>Numero</td>
+          <td>{{client.numero}}</td>
+      </tr>
+  </table>
+  <div class="col-xs-offset-5 col-xs-2">
+      <a class="btn btn-primary" ui-sref="editClient({id:client.id})">Edit</a>
+  </div>
+</div>
